@@ -75,6 +75,7 @@ const Register = ({ setSharedState }: RegisterProps) => {
       'input[name="passwordConfirm"]'
     ) as HTMLInputElement;
 
+    /*
     const systemIdInput = form.querySelector(
       'input[name="systemID"]'
     ) as HTMLInputElement;
@@ -85,6 +86,7 @@ const Register = ({ setSharedState }: RegisterProps) => {
 
       return;
     }
+    */
 
     if (state.password != state.passwordConfirm) {
       confirmPasswordInput.setCustomValidity("Passwords do not match");
@@ -174,6 +176,7 @@ const Register = ({ setSharedState }: RegisterProps) => {
           }}
           required
         ></input>
+        {/*
         <input
           className={styles.systemID}
           type="text"
@@ -188,6 +191,7 @@ const Register = ({ setSharedState }: RegisterProps) => {
           }}
           required
         ></input>
+        */}
         <input
           className={styles.password}
           type="password"

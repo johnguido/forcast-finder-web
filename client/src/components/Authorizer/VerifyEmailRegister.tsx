@@ -62,6 +62,11 @@ const VerifyEmailRegister = ({
   };
 
   const registerUser = async () => {
+    let systemID = "";
+    for (let i = 0; i < 32; i++) {
+      systemID += "0";
+    }
+
     const reponse = await AuthService.registerUser(
       firstName,
       lastName,

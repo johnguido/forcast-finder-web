@@ -40,7 +40,7 @@ class EmailController {
 
     try {
       const msg = await EmailController.mailgunClient.messages.create(
-        "sandboxb5299747311146fd8b75ce22440d81cc.mailgun.org",
+        "sandbox178507ca98d44b498cc24dba72887679.mailgun.org",
         {
           from: "Desktop Aquaponics <desktopaquaponicshelp@gmail.com>",
           to: [email],
