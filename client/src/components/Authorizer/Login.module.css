@@ -1,0 +1,165 @@
+.main {
+  width: 460px;
+  height: 500px;
+
+  background-color: black;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  font-family: var(--font);
+}
+
+.form {
+  color: grey;
+
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: column;
+
+  margin-top: 0;
+  margin-bottom: 40px;
+
+  font-family: var(--font);
+  font-size: 0.8rem;
+}
+
+.mainMessage {
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 40px;
+
+  font-size: 1.4rem;
+}
+
+.subMessage {
+  color: grey;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 0;
+  margin-bottom: 40px;
+
+  font-size: 0.8rem;
+}
+
+.emailInput,
+.passwordInput {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.passwordInput {
+  margin-top: 20px;
+}
+
+.form > div > label {
+  color: #fff;
+
+  letter-spacing: 0.5px;
+}
+
+.email,
+.password {
+  height: 30px;
+  width: 350px;
+
+  border-radius: 5px;
+  padding: 5px;
+
+  color: white;
+
+  background-color: #15151e;
+
+  letter-spacing: 0.5px;
+}
+
+.forgotPassword {
+  color: white;
+
+  text-align: end;
+
+  margin-top: 20px;
+
+  font-family: (var(--font));
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+}
+
+.signUp {
+  color: white;
+
+  cursor: pointer;
+
+  text-align: center;
+
+  width: 364px;
+
+  margin-top: 40px;
+}
+
+.signUp > a {
+  color: #1f4690;
+}
+
+.submit {
+  height: 50px;
+  width: 364px;
+
+  margin-top: 25px;
+
+  background-color: #1f4690;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  color: white;
+}
+
+.submit:disabled {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading {
+  border: 2px solid #ccc;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border-top-color: black;
+  border-left-color: black;
+  animation: spin 1s infinite ease-in;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

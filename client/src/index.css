@@ -1,0 +1,15 @@
+:root {
+  --font: monospace;
+}
+
+body {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #15151e;
+
+  cursor: default;
+}
