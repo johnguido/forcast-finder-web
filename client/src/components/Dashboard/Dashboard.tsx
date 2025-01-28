@@ -37,8 +37,21 @@ const Dashboard = () => {
     });
   }
 
-  function errorGettingCurrentPosition() {
+  async function errorGettingCurrentPosition() {
     console.log("Error grabbing current position... setting to default");
+    const locationData = await DashService.getLocationDataFromName(
+      "Ashland KY"
+    );
+
+    setState({
+      initialLoadHandled: true,
+      forcast: locationData.forcast,
+      coordinates: {
+        latitude: locationData.latitude,
+        longitude: locationData.longitude,
+      },
+      locationName: locationData.name,
+    });
   }
 
   async function handleMapClick(e) {
