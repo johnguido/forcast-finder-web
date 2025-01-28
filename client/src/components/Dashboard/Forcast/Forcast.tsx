@@ -2,8 +2,21 @@ import { useState } from "react";
 import Header from "./Header";
 import Display from "./Display";
 
+interface forcastDay {
+  datetime: string;
+  icon: string;
+  temp: number;
+  feelslike: number;
+  winddir: number;
+  windspeed: number;
+  humidity: number;
+  uvindex: number;
+  sunriseEpoch: number;
+  sunsetEpoch: number;
+}
+
 interface ForcastProps {
-  forcast: unknown;
+  forcast: { days: Array<forcastDay> };
 }
 
 const Forcast = ({ forcast }: ForcastProps) => {
@@ -22,7 +35,7 @@ const Forcast = ({ forcast }: ForcastProps) => {
       <section>
         <Header handleTemperatureSelect={handleTemperatureSelect}></Header>
         <Display
-          forcast={forcast.days}
+          forcastDays={forcast.days}
           temperatureSelection={temperatureSelection}
         ></Display>
       </section>

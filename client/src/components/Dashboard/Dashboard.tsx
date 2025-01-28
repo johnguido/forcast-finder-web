@@ -8,7 +8,7 @@ import styles from "./Dashboard.module.css";
 const Dashboard = () => {
   const [state, setState] = useState({
     initialLoadHandled: false,
-    forcast: "",
+    forcast: null,
     coordinates: { latitude: null, longitude: null },
     locationName: null,
   });
@@ -41,7 +41,7 @@ const Dashboard = () => {
     console.log("Error grabbing current position... setting to default");
   }
 
-  async function handleMapClick(e: unknown) {
+  async function handleMapClick(e) {
     const locationData = await DashService.getLocationDataFromCoordinates({
       latitude: e.lngLat.lat,
       longitude: e.lngLat.lng,

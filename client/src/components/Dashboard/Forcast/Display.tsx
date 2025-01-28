@@ -2,12 +2,25 @@ import { useState } from "react";
 import ForcastCard from "./ForcastCard";
 import styles from "./Display.module.css";
 
+interface forcastDay {
+  datetime: string;
+  icon: string;
+  temp: number;
+  feelslike: number;
+  winddir: number;
+  windspeed: number;
+  humidity: number;
+  uvindex: number;
+  sunriseEpoch: number;
+  sunsetEpoch: number;
+}
+
 interface DisplayProps {
-  forcast: unknown;
+  forcastDays: Array<forcastDay>;
   temperatureSelection: string;
 }
 
-const Display = ({ forcast, temperatureSelection }: DisplayProps) => {
+const Display = ({ forcastDays, temperatureSelection }: DisplayProps) => {
   const [activeCard, setActiveCard] = useState(0);
 
   function handleActiveCardSelect(id: number) {
@@ -20,7 +33,7 @@ const Display = ({ forcast, temperatureSelection }: DisplayProps) => {
     if (i === activeCard) {
       forcastJsx.push(
         <ForcastCard
-          forcastDay={forcast ? forcast[i] : null}
+          forcastDay={forcastDays ? forcastDays[i] : null}
           temperatureSelection={temperatureSelection}
           isActive={true}
           id={i.toString()}
@@ -31,7 +44,7 @@ const Display = ({ forcast, temperatureSelection }: DisplayProps) => {
     } else {
       forcastJsx.push(
         <ForcastCard
-          forcastDay={forcast ? forcast[i] : null}
+          forcastDay={forcastDays ? forcastDays[i] : null}
           temperatureSelection={temperatureSelection}
           isActive={false}
           id={i.toString()}
