@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import DashService from "./DashService";
 import Header from "./Header";
 import Forcast from "./Forcast/Forcast";

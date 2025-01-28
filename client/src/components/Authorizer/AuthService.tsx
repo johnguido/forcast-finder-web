@@ -9,7 +9,7 @@ interface AuthResponse {
 }
 
 class AuthService {
-  private static baseURL: string = "http://localhost:3000";
+  private static baseURL: string = "http://localhost:4000";
 
   static async loginUser(email: string, password: string) {
     try {
