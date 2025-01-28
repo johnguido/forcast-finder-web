@@ -6,7 +6,7 @@ interface Coordinates {
 }
 
 class DashService {
-  private static baseURL: string = "http://localhost:3000";
+  private static baseURL: string = "http://localhost:4000";
 
   static async getLocationDataFromCoordinates(coordinates: Coordinates) {
     try {

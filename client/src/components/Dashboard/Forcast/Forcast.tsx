@@ -35,7 +35,7 @@ const Forcast = ({ forcast }: ForcastProps) => {
       <section>
         <Header handleTemperatureSelect={handleTemperatureSelect}></Header>
         <Display
-          forcastDays={forcast.days}
+          forcastDays={forcast ? forcast.days : null}
           temperatureSelection={temperatureSelection}
         ></Display>
       </section>
