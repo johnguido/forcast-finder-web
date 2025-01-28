@@ -26,7 +26,7 @@ app.use("/location", locationRouter);
 const buildPath = path.join(__dirname, "../../client/dist");
 app.use(express.static(buildPath));
 
-const PORT = 3000;
+const PORT = 4000;
 app.listen(PORT, () => {
   console.log(`My first Express app - listening on port ${PORT}!`);
 });
