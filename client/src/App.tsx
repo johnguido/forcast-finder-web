@@ -11,6 +11,7 @@ function App() {
   });
 
   //initial load need to send user to login page
+
   return (
     <>{user.id != "" ? <Dashboard /> : <Authorizer setUser={setUser} />}</>
   );

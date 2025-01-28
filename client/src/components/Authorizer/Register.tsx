@@ -20,7 +20,6 @@ const Register = ({ setSharedState }: RegisterProps) => {
     firstName: "",
     lastName: "",
     email: "",
-    systemID: "",
     password: "",
     passwordConfirm: "",
     emailNeedsVerified: false,
@@ -40,9 +39,6 @@ const Register = ({ setSharedState }: RegisterProps) => {
         break;
       case "email":
         setState({ ...state, email: e.target.value });
-        break;
-      case "systemID":
-        setState({ ...state, systemID: e.target.value });
         break;
       case "password":
         setState({ ...state, password: e.target.value });
@@ -74,19 +70,6 @@ const Register = ({ setSharedState }: RegisterProps) => {
     const confirmPasswordInput = form.querySelector(
       'input[name="passwordConfirm"]'
     ) as HTMLInputElement;
-
-    /*
-    const systemIdInput = form.querySelector(
-      'input[name="systemID"]'
-    ) as HTMLInputElement;
-
-    if (state.systemID.length != 32) {
-      systemIdInput.setCustomValidity("SystemID's are 32 characters");
-      systemIdInput.reportValidity();
-
-      return;
-    }
-    */
 
     if (state.password != state.passwordConfirm) {
       confirmPasswordInput.setCustomValidity("Passwords do not match");
@@ -131,7 +114,6 @@ const Register = ({ setSharedState }: RegisterProps) => {
         firstName={state.firstName}
         lastName={state.lastName}
         email={state.email}
-        systemID={state.systemID}
         password={state.password}
       ></VerifyEmailReigster>
     );
@@ -176,22 +158,6 @@ const Register = ({ setSharedState }: RegisterProps) => {
           }}
           required
         ></input>
-        {/*
-        <input
-          className={styles.systemID}
-          type="text"
-          name="systemID"
-          autoComplete="off"
-          placeholder="System ID"
-          onChange={(e) => handleInputChange(e, "systemID")}
-          value={state.systemID}
-          onInput={(e) => {
-            const target = e.target as HTMLInputElement;
-            target.setCustomValidity("");
-          }}
-          required
-        ></input>
-        */}
         <input
           className={styles.password}
           type="password"

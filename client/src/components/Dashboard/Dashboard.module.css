@@ -1,0 +1,36 @@
+body {
+  background-color: #464650;
+}
+
+.main {
+  background-color: #15151e;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+
+  cursor: default;
+
+  /*
+    width: 1000px;
+    height: 800px;
+  */
+
+  aspect-ratio: 7 / 5;
+  width: min(1375px, 80vw);
+  min-width: 1040px;
+  border-radius: 30px;
+
+  padding: 30px 30px 30px 30px;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template: 0.75fr 1fr / 3fr 1fr;
+
+  height: 90%;
+  width: 100%;
+}

@@ -22,13 +22,12 @@ class LoginController {
   }
 
   static async regiserUser(req, res): Promise<void> {
-    const { firstName, lastName, email, systemID, password } = req.params;
+    const { firstName, lastName, email, password } = req.params;
 
     const response = await userModel.registerUser(
       firstName,
       lastName,
       email,
-      systemID,
       password
     );
 

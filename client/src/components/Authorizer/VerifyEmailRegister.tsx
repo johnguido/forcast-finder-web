@@ -16,7 +16,6 @@ interface VerfiyEmailProps {
   firstName: string;
   lastName: string;
   email: string;
-  systemID: string;
   password: string;
 }
 
@@ -25,7 +24,6 @@ const VerifyEmailRegister = ({
   firstName,
   lastName,
   email,
-  systemID,
   password,
 }: VerfiyEmailProps) => {
   const [state, setState] = useState({
@@ -62,16 +60,10 @@ const VerifyEmailRegister = ({
   };
 
   const registerUser = async () => {
-    let systemID = "";
-    for (let i = 0; i < 32; i++) {
-      systemID += "0";
-    }
-
     const reponse = await AuthService.registerUser(
       firstName,
       lastName,
       email,
-      systemID,
       password
     );
 

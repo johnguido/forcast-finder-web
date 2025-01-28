@@ -1,0 +1,116 @@
+.upper {
+  height: 15%;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.daySelect {
+  height: 80%;
+  width: 60%;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  gap: 7%;
+
+  padding-left: 1%;
+}
+
+.daySelectOption {
+  font-family: monospace, Courier, "Times New Roman";
+  font-size: 0.9rem;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+
+  color: darkgrey;
+}
+
+#nextSeven {
+  color: white;
+}
+
+.temperatureSwitch {
+  height: 60%;
+  width: 15%;
+
+  border-radius: 100px;
+
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  color: black;
+
+  font-family: monospace, Courier, "Times New Roman";
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch input {
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: #262629;
+
+  transition: 0.4s;
+
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "F\00b0";
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 110%;
+  width: 55%;
+
+  background-color: white;
+
+  top: -5%;
+
+  transition: 0.4s;
+
+  border-radius: 30px;
+}
+
+input:checked + .slider {
+  background-color: #262629;
+}
+
+input:checked + .slider:before {
+  transform: translateX(82%);
+
+  content: "C\00b0";
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

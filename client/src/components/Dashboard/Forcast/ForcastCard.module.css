@@ -1,0 +1,203 @@
+/* NON ACTIVE CARD */
+
+.forcastCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  cursor: pointer;
+
+  background-color: #262629;
+  border-radius: 20px;
+
+  height: 80%;
+  width: 10%;
+
+  color: white;
+
+  font-family: monospace, Courier, "Times New Roman";
+  letter-spacing: 0.01rem;
+}
+
+.forcastCard > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.forcastCardUpper {
+  font-size: 1rem;
+  font-weight: 100;
+
+  height: 20%;
+
+  justify-content: center;
+
+  border-bottom: 1px solid lightgrey;
+}
+
+.forcastCardMiddle {
+  height: 50%;
+
+  justify-content: center;
+}
+
+.forcastCardMiddle > img {
+  height: 60%;
+  width: auto;
+
+  justify-content: center;
+}
+
+.forcastCardLower {
+  height: 30%;
+  width: 100%;
+
+  justify-content: start;
+  align-items: center;
+
+  padding-left: 17%;
+
+  font-size: 1.7rem;
+  letter-spacing: 0;
+}
+
+/* ACTIVE CARD */
+
+.forcastCardActive {
+  border-radius: 20px;
+
+  transition-property: width;
+  transition-duration: 4s;
+  transition-delay: 2s;
+
+  cursor: default;
+
+  animation: grow 0.3s ease-out;
+
+  height: 80%;
+  width: 27%;
+
+  color: white;
+
+  font-family: monospace, Courier, "Times New Roman";
+  letter-spacing: 0.01rem;
+}
+
+@keyframes grow {
+  0% {
+    width: 10%;
+  }
+  100% {
+    width: 27%;
+  }
+}
+
+.forcastCardActiveUpper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 23%;
+
+  -webkit-border-radius: 20px 20px 0px 0px;
+  border-radius: 20px 20px 0px 0px;
+
+  animation: growFontUpper 0.3s ease-out;
+
+  background-color: #adcade;
+
+  color: black;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+@keyframes growFontUpper {
+  0% {
+    font-size: 0rem;
+  }
+  100% {
+    font-size: 0.9rem;
+  }
+}
+
+.forcardCardActiveLower {
+  height: 77%;
+
+  background-color: #bad8eb;
+
+  -webkit-border-radius: 0px 0px 20px 20px;
+  border-radius: 0px 0px 20px 20px;
+
+  display: flex;
+}
+
+.forcastCardActiveLowerLeft {
+  width: 43%;
+
+  padding: 7% 0% 7% 7%;
+
+  color: black;
+}
+
+.forcastCardActiveLowerLeft > div {
+  margin-bottom: 25%;
+
+  font-size: 2rem;
+}
+
+.forcastCardActiveLowerLeft > div > h6 {
+  margin: 3%;
+
+  animation: growFontLower 0.3s ease-out;
+
+  font-size: 0.61rem;
+}
+
+.forcastCardActiveLowerRight {
+  width: 50%;
+}
+
+.forcastCardActiveLowerRightImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 5%;
+
+  height: 45%;
+}
+
+.forcastCardActiveLowerRightSunTime {
+  height: 38%;
+
+  margin-top: 29%;
+}
+
+.forcastCardActiveLowerRight > div > img {
+  height: 100%;
+  width: auto;
+}
+
+.forcastCardActiveLowerRight > div > h6 {
+  margin-top: 2.58%;
+  margin-bottom: 0;
+
+  animation: growFontLower 0.3s ease-out;
+
+  font-family: monospace, Courier, "Times New Roman";
+  letter-spacing: 0.01rem;
+  font-size: 0.61rem;
+
+  color: black;
+}
+
+@keyframes growFontLower {
+  0% {
+    font-size: 0rem;
+  }
+  100% {
+    font-size: 0.61rem;
+  }
+}

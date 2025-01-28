@@ -1,0 +1,26 @@
+.mapContainer {
+  height: 100%;
+}
+
+.mapUpper {
+  height: 11%;
+
+  color: white;
+}
+
+.mapUpper > h2 {
+  font-family: monospace, Courier, "Times New Roman";
+  font-size: 0.9rem;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+
+  margin: 0;
+}
+
+.mapboxgl-ctrl {
+  display: none !important;
+}
+
+.mapboxgl-ctrl-bottom-right {
+  display: none !important;
+}

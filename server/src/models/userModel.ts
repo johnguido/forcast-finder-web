@@ -62,7 +62,6 @@ class UserModel {
     firstName: string,
     lastName: string,
     email: string,
-    systemID: string,
     password: string
   ) {
     try {
@@ -76,8 +75,8 @@ class UserModel {
       const response = await database
         .getPool()
         .query(
-          "INSERT INTO users (id, first_name, last_name, email, password, created_at, updated_at, deleted_at, is_active, system_id) VALUES ($1, $2, $3, $4, $5, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, true, $6)",
-          [userID, firstName, lastName, email, hashedPassword, systemID]
+          "INSERT INTO users (id, first_name, last_name, email, password, created_at, updated_at, deleted_at, is_active) VALUES ($1, $2, $3, $4, $5, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, NULL, true)",
+          [userID, firstName, lastName, email, hashedPassword]
         );
 
       return {
