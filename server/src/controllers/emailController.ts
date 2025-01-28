@@ -42,9 +42,9 @@ class EmailController {
       const msg = await EmailController.mailgunClient.messages.create(
         "sandbox178507ca98d44b498cc24dba72887679.mailgun.org",
         {
-          from: "Desktop Aquaponics <desktopaquaponicshelp@gmail.com>",
+          from: "Forcast Finder <forcastfinder@gmail.com>",
           to: [email],
-          subject: "Desktop Aquaponics Email Verification",
+          subject: "Forcast Finder Email Verification",
           text: `Here is your 6 digit pin: ${pin}`,
         }
       );
